@@ -10,6 +10,10 @@
     "typings": "typings",
     "postinstall": "typings install"
   },
+  "engines": {
+    "npm": "3.6.0",
+    "node": "5.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcgaryes/ericmcgary.git"
