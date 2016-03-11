@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>foo bar</h1>'
+    template: '<div class="placeholder"><img src="/images/smiley.png" width="50" /></div>'
 })
 
 export class AppComponent { }

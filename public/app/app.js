@@ -22,7 +22,7 @@ System.register(['angular2/core'], function(exports_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>foo bar</h1>'
+                        template: '<div class="placeholder"><img src="/images/smiley.png" width="50" /></div>'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
