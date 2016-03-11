@@ -8,7 +8,7 @@
     "start": "pm2 start ./server/main.js",
     "debug": "pm2-dev start ./server/main.js",
     "typings": "typings",
-    "postinstall": "typings install"
+    "postinstall": "npm run typings install"
   },
   "engines": {
     "npm": "3.6.0",
