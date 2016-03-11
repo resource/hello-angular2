@@ -37,7 +37,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
-app.use(express.static(path.join('./public')));
+
+var publicFolder = path.join(__dirname, '../public');
+var nodeModulesFolder = path.join(__dirname, '../node_modules');
+
+console.log(publicFolder, nodeModulesFolder);
+
+app.use(express.static(publicFolder));
+app.use(express.static(nodeModulesFolder));
 
 // route handling
 
