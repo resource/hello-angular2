@@ -1,4 +1,4 @@
-System.register(['angular2/core', './header', './content', './footer'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,38 +8,28 @@ System.register(['angular2/core', './header', './content', './footer'], function
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, header_1, content_1, footer_1;
-    var AppComponent;
+    var core_1;
+    var ContentComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (header_1_1) {
-                header_1 = header_1_1;
-            },
-            function (content_1_1) {
-                content_1 = content_1_1;
-            },
-            function (footer_1_1) {
-                footer_1 = footer_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            ContentComponent = (function () {
+                function ContentComponent() {
                 }
-                AppComponent = __decorate([
+                ContentComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        directives: [header_1.HeaderComponent, content_1.ContentComponent, footer_1.FooterComponent],
-                        template: "\n        <div>\n            <app-header></app-header>\n            <app-content></app-content>\n            <app-footer></app-footer>\n        </div>\n    "
+                        selector: 'app-content',
+                        template: '<div>Content</div>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], ContentComponent);
+                return ContentComponent;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("ContentComponent", ContentComponent);
         }
     }
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=content.js.map
