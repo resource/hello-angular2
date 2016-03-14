@@ -18,11 +18,12 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             HeaderComponent = (function () {
                 function HeaderComponent() {
+                    this.headerLinks = [{ title: "One" }, { title: "Two" }, { title: "Three" }];
                 }
                 HeaderComponent = __decorate([
                     core_1.Component({
                         selector: 'app-header',
-                        template: '<div>Header</div>'
+                        template: "\n        <header>\n            <nav class=\"nav nav-inline\">\n                <a href=\"#\" *ngFor=\"#headerLink of headerLinks\" class=\"nav-link\">{{headerLink.title}}</a>\n            </nav>\n        </header>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HeaderComponent);
