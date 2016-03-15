@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name": "ericmcgary.com",
+    "script": "./server/main.js",
+    "merge_logs": false,
+    "watch": true,
+    "ignore_watch": ["node_modules/**", "public/**", ".idea/**",".git/**"],
+    "watch_options": {
+      "followSymlinks": false
+    }
+  }]
+}

@@ -20,10 +20,16 @@ System.register(['angular2/core'], function(exports_1) {
                 function HeaderComponent() {
                     this.headerLinks = [{ title: "One" }, { title: "Two" }, { title: "Three" }];
                 }
+                HeaderComponent.prototype.navItemSelected = function (item) {
+                    console.log(item.title + " was selected");
+                };
+                HeaderComponent.prototype.ngOnInit = function () {
+                    console.log("init header component");
+                };
                 HeaderComponent = __decorate([
                     core_1.Component({
                         selector: 'app-header',
-                        template: "\n        <header>\n            <nav class=\"nav nav-inline\">\n                <a href=\"#\" *ngFor=\"#headerLink of headerLinks\" class=\"nav-link\">{{headerLink.title}}</a>\n            </nav>\n        </header>\n    "
+                        template: "\n        <header>\n            <nav class=\"navbar navbar-light bg-faded\">\n                <div class=\"nav navbar-nav\">\n                    <a class=\"navbar-brand\" href=\"#\">Brand</a>\n                    <a href=\"#\" *ngFor=\"#headerLink of headerLinks\" (click)=\"navItemSelected(headerLink)\" class=\"nav-item nav-link\">\n                        {{headerLink.title}}\n                    </a>\n                </div>\n            </nav>\n        </header>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HeaderComponent);

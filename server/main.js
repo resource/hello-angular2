@@ -41,8 +41,6 @@ app.use(compression());
 var publicFolder = path.join(__dirname, '../public');
 var nodeModulesFolder = path.join(__dirname, '../node_modules');
 
-console.log(publicFolder, nodeModulesFolder);
-
 app.use(express.static(publicFolder));
 app.use(express.static(nodeModulesFolder));
 

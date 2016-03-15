@@ -5,8 +5,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./server/main.js",
-    "debug": "pm2-dev start ./server/main.js",
+    "start": "pm2 start ecosystem.json",
+    "debug": "pm2-dev start ecosystem.json",
     "typings": "typings",
     "postinstall": "npm run typings install"
   },
