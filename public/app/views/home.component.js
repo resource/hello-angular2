@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,28 +8,31 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var ContentComponent;
+    var core_1, router_1;
+    var HomeComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
-            ContentComponent = (function () {
-                function ContentComponent() {
+            HomeComponent = (function () {
+                function HomeComponent() {
                 }
-                ContentComponent = __decorate([
+                HomeComponent = __decorate([
                     core_1.Component({
-                        selector: 'app-content',
-                        template: '<div>Content</div>'
+                        template: '<div>Home</div>',
+                        directives: [router_1.RouterOutlet]
                     }), 
                     __metadata('design:paramtypes', [])
-                ], ContentComponent);
-                return ContentComponent;
+                ], HomeComponent);
+                return HomeComponent;
             })();
-            exports_1("ContentComponent", ContentComponent);
+            exports_1("HomeComponent", HomeComponent);
         }
     }
 });
-//# sourceMappingURL=content.js.map
+//# sourceMappingURL=home.component.js.map

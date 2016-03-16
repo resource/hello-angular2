@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
 
         <meta charset="utf-8">
@@ -16,6 +17,7 @@
         <script src="/systemjs/dist/system.src.js"></script>
         <script src="/rxjs/bundles/Rx.js"></script>
         <script src="/angular2/bundles/angular2.dev.js"></script>
+        <script src="/angular2/bundles/router.dev.js"></script>
 
         <script>
             System.config({
@@ -31,7 +33,8 @@
 
     </head>
 
-    <!-- 3. Display the application -->
+    <base href="/">
+
     <body>
         <div class="container-fluid">
             <my-app></my-app>

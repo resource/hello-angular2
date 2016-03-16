@@ -46,7 +46,7 @@ app.use(express.static(nodeModulesFolder));
 
 // route handling
 
-app.use('/',[index]);
+app.use('*',[index]);
 
 // error handling
 
