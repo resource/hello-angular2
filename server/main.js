@@ -20,6 +20,7 @@ const compression = require('compression');
 // routes
 
 const index = require('./routes/index');
+const projects = require('./routes/projects');
 
 // ============================================================
 // === Setup ==================================================
@@ -38,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
 
-var publicFolder = path.join(__dirname, '../public');
+var publicFolder = path.join(__dirname, '../client');
 var nodeModulesFolder = path.join(__dirname, '../node_modules');
 
 app.use(express.static(publicFolder));
@@ -46,7 +47,8 @@ app.use(express.static(nodeModulesFolder));
 
 // route handling
 
-app.use('*',[index]);
+app.use('/api',[projects]);
+app.use('*',index);
 
 // error handling
 
