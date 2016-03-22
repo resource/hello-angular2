@@ -47,7 +47,6 @@ app.use(express.static(nodeModulesFolder));
 
 // route handling
 
-app.use('/api',[projects]);
 app.use('*',index);
 
 // error handling
