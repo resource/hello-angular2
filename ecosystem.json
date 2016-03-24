@@ -3,7 +3,7 @@
     "script": "./server/main.js",
     "merge_logs": false,
     "watch": true,
-    "ignore_watch": ["node_modules/**", "public/**", ".idea/**",".git/**"],
+    "ignore_watch": ["node_modules/**", "client/**", ".idea/**",".git/**"],
     "watch_options": {
       "followSymlinks": false
     }

@@ -1,4 +1,4 @@
-export interface ProjectImage {
+export interface ActorImage {
     id: string;
     caption: string;
     source: string;

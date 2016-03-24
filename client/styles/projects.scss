@@ -1,33 +1,3 @@
 .projects {
 
-	ul {
-
-		@extend .list-group;
-
-		display: flex;
-		flex-flow: row wrap;
-		align-content:space-between;
-
-		li {
-
-			@extend .list-group-item;
-			@extend .col-xs-12;
-			@extend .col-sm-6;
-			@extend .col-md-4;
-			@extend .col-lg-3;
-
-			display: flex;
-			flex-direction: column;
-
-			//background-color: #eee;
-			border:none;
-			padding: 30px;
-
-			h4, p, img {
-				padding:0;
-				margin-bottom:10px;
-			}
-
-		}
-	}
 }

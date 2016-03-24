@@ -640,7 +640,7 @@ pre {
   margin-left: -0.9375rem;
   margin-right: -0.9375rem; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .projects ul li, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
@@ -679,7 +679,7 @@ pre {
 .col-xs-11 {
   flex: 0 0 91.66667%; }
 
-.col-xs-12, .projects ul li {
+.col-xs-12 {
   flex: 0 0 100%; }
 
 .col-xs-pull-0 {
@@ -815,7 +815,7 @@ pre {
   .col-sm-5 {
     flex: 0 0 41.66667%; }
 
-  .col-sm-6, .projects ul li {
+  .col-sm-6 {
     flex: 0 0 50%; }
 
   .col-sm-7 {
@@ -962,7 +962,7 @@ pre {
   .col-md-3 {
     flex: 0 0 25%; }
 
-  .col-md-4, .projects ul li {
+  .col-md-4 {
     flex: 0 0 33.33333%; }
 
   .col-md-5 {
@@ -1112,7 +1112,7 @@ pre {
   .col-lg-2 {
     flex: 0 0 16.66667%; }
 
-  .col-lg-3, .projects ul li {
+  .col-lg-3 {
     flex: 0 0 25%; }
 
   .col-lg-4 {
@@ -3031,9 +3031,9 @@ input[type="button"].btn-block {
 .card-link + .card-link {
   margin-left: 1.25rem; }
 
-.card > .list-group:first-child .list-group-item:first-child, .projects .card > ul:first-child .list-group-item:first-child, .card > .list-group:first-child .projects ul li:first-child, .projects ul .card > .list-group:first-child li:first-child, .projects .card > ul:first-child li:first-child {
+.card > .list-group:first-child .list-group-item:first-child {
   border-radius: 0.25rem 0.25rem 0 0; }
-.card > .list-group:last-child .list-group-item:last-child, .projects .card > ul:last-child .list-group-item:last-child, .card > .list-group:last-child .projects ul li:last-child, .projects ul .card > .list-group:last-child li:last-child, .projects .card > ul:last-child li:last-child {
+.card > .list-group:last-child .list-group-item:last-child {
   border-radius: 0 0 0.25rem 0.25rem; }
 
 .card-header {
@@ -3575,31 +3575,31 @@ a.label:focus, a.label:hover {
   padding-left: 0;
   list-style: none; }
 
-.list-group, .projects ul {
+.list-group {
   padding-left: 0;
   margin-bottom: 0; }
 
-.list-group-item, .projects ul li {
+.list-group-item {
   position: relative;
   display: block;
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid #ddd; }
-  .list-group-item:first-child, .projects ul li:first-child {
+  .list-group-item:first-child {
     border-top-right-radius: 0.25rem;
     border-top-left-radius: 0.25rem; }
-  .list-group-item:last-child, .projects ul li:last-child {
+  .list-group-item:last-child {
     margin-bottom: 0;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
 
-.list-group-flush .list-group-item, .list-group-flush .projects ul li, .projects ul .list-group-flush li {
+.list-group-flush .list-group-item {
   border-width: 1px 0;
   border-radius: 0; }
-.list-group-flush:first-child .list-group-item:first-child, .list-group-flush:first-child .projects ul li:first-child, .projects ul .list-group-flush:first-child li:first-child {
+.list-group-flush:first-child .list-group-item:first-child {
   border-top: 0; }
-.list-group-flush:last-child .list-group-item:last-child, .list-group-flush:last-child .projects ul li:last-child, .projects ul .list-group-flush:last-child li:last-child {
+.list-group-flush:last-child .list-group-item:last-child {
   border-bottom: 0; }
 
 a.list-group-item,
@@ -3617,34 +3617,28 @@ button.list-group-item {
     text-decoration: none;
     background-color: #f5f5f5; }
 
-.list-group-item.disabled, .projects ul li.disabled, .list-group-item.disabled:focus, .projects ul li.disabled:focus, .list-group-item.disabled:hover, .projects ul li.disabled:hover {
+.list-group-item.disabled, .list-group-item.disabled:focus, .list-group-item.disabled:hover {
   color: #818a91;
   cursor: not-allowed;
   background-color: #eceeef; }
-  .list-group-item.disabled .list-group-item-heading, .projects ul li.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .projects ul li.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .projects ul li.disabled:hover .list-group-item-heading {
+  .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading {
     color: inherit; }
-  .list-group-item.disabled .list-group-item-text, .projects ul li.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .projects ul li.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .projects ul li.disabled:hover .list-group-item-text {
+  .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text {
     color: #818a91; }
-.list-group-item.active, .projects ul li.active, .list-group-item.active:focus, .projects ul li.active:focus, .list-group-item.active:hover, .projects ul li.active:hover {
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
   z-index: 2;
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8; }
-  .list-group-item.active .list-group-item-heading, .projects ul li.active .list-group-item-heading,
+  .list-group-item.active .list-group-item-heading,
   .list-group-item.active .list-group-item-heading > small,
-  .projects ul li.active .list-group-item-heading > small,
-  .list-group-item.active .list-group-item-heading > .small,
-  .projects ul li.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading, .projects ul li.active:focus .list-group-item-heading,
+  .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading,
   .list-group-item.active:focus .list-group-item-heading > small,
-  .projects ul li.active:focus .list-group-item-heading > small,
-  .list-group-item.active:focus .list-group-item-heading > .small,
-  .projects ul li.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading, .projects ul li.active:hover .list-group-item-heading,
+  .list-group-item.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
   .list-group-item.active:hover .list-group-item-heading > small,
-  .projects ul li.active:hover .list-group-item-heading > small,
-  .list-group-item.active:hover .list-group-item-heading > .small,
-  .projects ul li.active:hover .list-group-item-heading > .small {
+  .list-group-item.active:hover .list-group-item-heading > .small {
     color: inherit; }
-  .list-group-item.active .list-group-item-text, .projects ul li.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .projects ul li.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .projects ul li.active:hover .list-group-item-text {
+  .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text {
     color: #a8d6fe; }
 
 .list-group-item-success {
@@ -4732,24 +4726,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   .hidden-print {
     display: none !important; } }
 
-.home {
-  padding: 0; }
-
 .about {
   padding: 0; }
-
-.projects ul {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-between; }
-  .projects ul li {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    padding: 30px; }
-    .projects ul li h4, .projects ul li p, .projects ul li img {
-      padding: 0;
-      margin-bottom: 10px; }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }

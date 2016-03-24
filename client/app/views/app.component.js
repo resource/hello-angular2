@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './projects.component', './about.component', './project-detail.component'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './about.component', './disclaimer.component', '../services/logger', "./actors.component", "./actor-detail.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', './projects.component', './
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, projects_component_1, about_component_1, project_detail_component_1;
+    var core_1, router_1, about_component_1, disclaimer_component_1, logger_1, actors_component_1, actor_detail_component_1;
     var AppComponent;
     return {
         setters:[
@@ -20,30 +20,38 @@ System.register(['angular2/core', 'angular2/router', './projects.component', './
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (projects_component_1_1) {
-                projects_component_1 = projects_component_1_1;
-            },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
             },
-            function (project_detail_component_1_1) {
-                project_detail_component_1 = project_detail_component_1_1;
+            function (disclaimer_component_1_1) {
+                disclaimer_component_1 = disclaimer_component_1_1;
+            },
+            function (logger_1_1) {
+                logger_1 = logger_1_1;
+            },
+            function (actors_component_1_1) {
+                actors_component_1 = actors_component_1_1;
+            },
+            function (actor_detail_component_1_1) {
+                actor_detail_component_1 = actor_detail_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    logger_1.Logger.log('AppComponent constructed');
                 }
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
+                        selector: 'actors-app',
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n        <div class=\"container-fluid\">\n            <nav class=\"navbar navbar-light bg-faded\">\n                <div class=\"navbar-brand\"><img src=\"/images/logo.png\" alt=\"logo\" width=\"44\" height=\"44\"></div>\n                <ul class=\"nav navbar-nav\">\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"['Projects']\">Projects</a>\n                    </li>\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"['About']\">About</a>\n                    </li>\n                </ul>\n            </nav>\n            <router-outlet></router-outlet>\n        </div>\n    "
+                        template: "\n        <div class=\"container-fluid\">\n            <nav class=\"navbar navbar-static-top navbar-light bg-faded\">\n                <a class=\"navbar-brand\" [routerLink]=\"['Actors']\">BAIH</a>\n                 <ul class=\"nav navbar-nav\">\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"['Actors']\">Actors</a>\n                    </li>\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link\" [routerLink]=\"['About']\">About</a>\n                    </li>\n                </ul>\n            </nav>\n            <div class=\"content\">\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n    "
                     }),
                     router_1.RouteConfig([
-                        { path: '/', redirectTo: ['Projects'] },
-                        { path: '/projects', name: 'Projects', component: projects_component_1.ProjectsComponent },
-                        { path: '/project/:id', name: 'ProjectDetail', component: project_detail_component_1.ProjectDetailComponent },
-                        { path: '/about', name: 'About', component: about_component_1.AboutComponent }
+                        { path: '/', redirectTo: ['Actors'] },
+                        { path: '/actors', name: 'Actors', component: actors_component_1.ActorsComponent },
+                        { path: '/actor/:id', name: 'ActorDetail', component: actor_detail_component_1.ActorDetailComponent },
+                        { path: '/about', name: 'About', component: about_component_1.AboutComponent },
+                        { path: '/disclaimer', name: 'Disclaimer', component: disclaimer_component_1.DisclaimerComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
