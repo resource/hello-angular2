@@ -11,7 +11,7 @@ System.register(["./logger", "angular2/http", "angular2/core", "rxjs/Observable"
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var logger_1, http_1, core_1, Observable_1;
-    var ActorsService;
+    var ItemsService;
     return {
         setters:[
             function (logger_1_1) {
@@ -28,43 +28,43 @@ System.register(["./logger", "angular2/http", "angular2/core", "rxjs/Observable"
             },
             function (_1) {}],
         execute: function() {
-            ActorsService = (function () {
+            ItemsService = (function () {
                 // ============================================================
                 // === Initialization =========================================
                 // ============================================================
-                function ActorsService(_http) {
+                function ItemsService(_http) {
                     this._http = _http;
                 }
                 // ============================================================
                 // === Public API =============================================
                 // ============================================================
-                ActorsService.prototype.getActors = function () {
-                    return this._http.get('/api/actors')
+                ItemsService.prototype.getItems = function () {
+                    return this._http.get('/api/items')
                         .map(function (res) { return res.json(); })
                         .catch(this.handleError);
                 };
-                ActorsService.prototype.getActorById = function (id) {
-                    return this._http.get('/api/actor/' + id)
+                ItemsService.prototype.getItemById = function (id) {
+                    return this._http.get('/api/item/' + id)
                         .map(function (res) { return res.json(); })
                         .catch(this.handleError);
                 };
                 // ============================================================
                 // === Private API ============================================
                 // ============================================================
-                ActorsService.prototype.handleError = function (error) {
+                ItemsService.prototype.handleError = function (error) {
                     // in a real world app, we may send the error to some remote logging infrastructure
                     // instead of just logging it to the console
                     logger_1.Logger.error(error);
                     return Observable_1.Observable.throw(error.json().error || 'Server error');
                 };
-                ActorsService = __decorate([
+                ItemsService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])
-                ], ActorsService);
-                return ActorsService;
+                ], ItemsService);
+                return ItemsService;
             }());
-            exports_1("ActorsService", ActorsService);
+            exports_1("ItemsService", ItemsService);
         }
     }
 });
-//# sourceMappingURL=actors.service.js.map
+//# sourceMappingURL=items.service.js.map

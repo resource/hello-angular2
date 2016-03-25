@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', "angular2/http", "../services/actors.service"], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', "angular2/http", "../services/items.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,8 +10,8 @@ System.register(['angular2/core', 'angular2/router', "angular2/http", "../servic
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, http_1, actors_service_1;
-    var ActorDetailComponent;
+    var core_1, router_1, http_1, items_service_1;
+    var ItemDetailComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -23,37 +23,36 @@ System.register(['angular2/core', 'angular2/router', "angular2/http", "../servic
             function (http_1_1) {
                 http_1 = http_1_1;
             },
-            function (actors_service_1_1) {
-                actors_service_1 = actors_service_1_1;
+            function (items_service_1_1) {
+                items_service_1 = items_service_1_1;
             }],
         execute: function() {
-            ActorDetailComponent = (function () {
-                function ActorDetailComponent(_service, _routeParams) {
+            ItemDetailComponent = (function () {
+                function ItemDetailComponent(_service, _routeParams) {
                     this._service = _service;
                     this._routeParams = _routeParams;
                     this.aid = _routeParams.get('id');
                 }
-                ActorDetailComponent.prototype.ngOnInit = function () {
+                ItemDetailComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    this._service.getActorById(this.aid).subscribe(function (aid) {
-                        _this.actor = aid;
-                        _this.descriptionParagraphs = _this.actor.description.split('\r');
+                    this._service.getItemById(this.aid).subscribe(function (aid) {
+                        _this.item = aid;
                     }, function (error) {
                         _this.error = error;
                     });
                 };
-                ActorDetailComponent = __decorate([
+                ItemDetailComponent = __decorate([
                     core_1.Component({
                         directives: [router_1.RouterOutlet, router_1.ROUTER_DIRECTIVES],
-                        providers: [http_1.HTTP_PROVIDERS, actors_service_1.ActorsService],
-                        template: "\n        <div *ngIf=\"actor\" class=\"actor-detail\">\n            <h3>{{actor.name}}</h3>\n            <img src=\"{{actor.images[1].source}}\" alt=\"\"/>\n            <p *ngFor=\"#paragraph of descriptionParagraphs\">{{paragraph}}</p>\n        </div>\n    "
+                        providers: [http_1.HTTP_PROVIDERS, items_service_1.ItemsService],
+                        template: "\n        <div *ngIf=\"item\" class=\"item-detail\">\n            <h3>{{item.name}}</h3>\n            <img src=\"{{item.poster}}\" class=\"img-fluid\" alt=\"Responsive image\"/>\n            <p>{{item.longDescription}}</p>\n        </div>\n    "
                     }), 
-                    __metadata('design:paramtypes', [actors_service_1.ActorsService, router_1.RouteParams])
-                ], ActorDetailComponent);
-                return ActorDetailComponent;
+                    __metadata('design:paramtypes', [items_service_1.ItemsService, router_1.RouteParams])
+                ], ItemDetailComponent);
+                return ItemDetailComponent;
             }());
-            exports_1("ActorDetailComponent", ActorDetailComponent);
+            exports_1("ItemDetailComponent", ItemDetailComponent);
         }
     }
 });
-//# sourceMappingURL=actor-detail.component.js.map
+//# sourceMappingURL=item-detail.component.js.map

@@ -20,7 +20,7 @@ const compression = require('compression');
 // routes
 
 const index = require('./routes/index');
-const actors = require('./routes/actors');
+const items = require('./routes/items');
 
 // ============================================================
 // === Setup ==================================================
@@ -47,7 +47,7 @@ app.use(express.static(nodeModulesFolder));
 
 // route handling
 
-app.use('/api',[actors]);
+app.use('/api',[items]);
 app.use('*',index);
 
 // error handling

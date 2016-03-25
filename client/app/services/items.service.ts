@@ -5,7 +5,7 @@ import {Observable} from "rxjs/Observable";
 import 'rxjs/Rx';
 
 @Injectable()
-export class ActorsService
+export class ItemsService
 {
 
     // ============================================================
@@ -18,16 +18,16 @@ export class ActorsService
     // === Public API =============================================
     // ============================================================
 
-    getActors ()
+    getItems ()
     {
-        return this._http.get('/api/actors')
+        return this._http.get('/api/items')
             .map(res => res.json())
             .catch(this.handleError);
     }
 
-    getActorById(id)
+    getItemById(id)
     {
-        return this._http.get('/api/actor/' + id)
+        return this._http.get('/api/item/' + id)
             .map(res => res.json())
             .catch(this.handleError);
     }
