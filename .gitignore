@@ -81,6 +81,9 @@ node_modules
 *.pem
 *.p12
 
+### Typescript
+
+typings
 
 ### Documentation
 docs

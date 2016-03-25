@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    </head>
+    <link rel="stylesheet" href="/styles/main.css">
 
-    <body>
-        <div>
-            <h2>:)</h2>
-        </div>
-    </body>
+    <script src="/es6-shim/es6-shim.js"></script>
+    <script src="/systemjs/dist/system-polyfills.js"></script>
+    <script src="/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="/systemjs/dist/system.src.js"></scr</script>
+    <script src="/rxjs/bundles/Rx.js"></script>
+    <script src="/angular2/bundles/angular2.dev.js"></script>
+    <script src="/angular2/bundles/http.dev.js"></script>
+    <script src="/angular2/bundles/router.dev.js"></script>
+
+    <script>
+
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+
+        System.import('/app/main').then(null, console.error.bind(console));
+
+    </script>
+
+    <base href="/">
+
+</head>
+
+
+
+<body>
+<div class="container-fluid">
+    <actors-app></actors-app>
+</div>
+</body>
 
 </html>
