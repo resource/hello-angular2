@@ -6,11 +6,11 @@ const ItemsService = require('../services/items-service')
 
 const items = new ItemsService();
 
-router.get('/items', function(req, res) {
+router.get('/items', (req, res) => {
     res.status(200).json(items.getItems());
 });
 
-router.get('/item/:id', function(req, res) {
+router.get('/item/:id', (req, res) => {
 
     let item;
 
