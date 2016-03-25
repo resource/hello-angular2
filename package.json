@@ -1,8 +1,8 @@
 {
-  "name": "ericmcgary",
+  "name": "hello-angular2",
   "version": "0.1.0",
-  "description": "Personal website.",
-  "license": "UNLICENSED",
+  "description": "Experimental app using Angular 2.0 and Bootstrap 4.0.",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "pm2 start ecosystem.json",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mcgaryes/ericmcgary.git"
+    "url": "git+https://github.com/resource/hello-angular2.git"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.12",
