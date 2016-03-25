@@ -1,0 +1,7 @@
+typings/
+typings.json
+tsconfig.json
+README.md
+*.map
+*.ts
+*.scss

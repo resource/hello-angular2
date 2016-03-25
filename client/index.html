@@ -29,13 +29,15 @@
                 }
             });
 
-            System.import('app/main').then(null, console.error.bind(console));
+            System.import('/app/main').then(null, console.error.bind(console));
 
         </script>
 
+        <base href="/">
+
     </head>
 
-    <base href="/">
+
 
     <body>
         <div class="container-fluid">

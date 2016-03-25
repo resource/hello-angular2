@@ -7,7 +7,7 @@ const path = require('path');
 
 router.get('/', function(req, res) {
     let file = String(fs.readFileSync(path.join(__dirname,'../../client/index.html')));
-    res.status(200).send(file);
+    res.status('200').send(file);
 });
 
 module.exports = router;
