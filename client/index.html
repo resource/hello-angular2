@@ -3,6 +3,8 @@
 
     <head>
 
+        <base href="/">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -21,6 +23,7 @@
         <script>
 
             System.config({
+                baseURL: '/',
                 packages: {
                     app: {
                         format: 'register',
@@ -29,11 +32,13 @@
                 }
             });
 
-            System.import('/app/main').then(null, console.error.bind(console));
+            System.import('/app/main').then(function(result){
+                console.log(result || 'main module loaded');
+            }).catch(function(err){
+                console.log(err);
+            });
 
         </script>
-
-        <base href="/">
 
     </head>
 

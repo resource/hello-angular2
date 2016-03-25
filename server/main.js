@@ -30,20 +30,14 @@ const items = require('./routes/items');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(compression());
 
-var publicFolder = path.join(__dirname, '../client');
-var nodeModulesFolder = path.join(__dirname, '../node_modules');
-
-app.use(express.static(publicFolder));
-app.use(express.static(nodeModulesFolder));
+app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../node_modules')));
 
 // route handling
 
@@ -54,24 +48,21 @@ app.use('*',index);
 
 app.use((req, res, next) => {
 
-    if (req.timedout) {
-        var err = new Error('Not Found');
-        err.status = 404;
-        next(err);
-    }
-    var err = new Error('Not Found');
-    err.status = 404;
+    let err = new Error('Not Found');
+    err.status = '404';
+    err.message = 'Not found';
     next(err);
+
 });
 
 app.use((err, req, res) => {
-    var response = {
+    let response = {
         error: {
-            status: err.status || 500,
-            detail: err.message
+            status: err.status || '500',
+            detail: err.message || 'Error'
         }
     };
-    res.status(err.status || 500).json(response);
+    res.status(err.status || '500').json(response);
 });
 
 // ============================================================
@@ -79,8 +70,8 @@ app.use((err, req, res) => {
 // ============================================================
 
 var httpServer = http.createServer(app);
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || '3000';
 
 httpServer.listen(PORT, () => {
-    logger.info('HTTP server running at %d', PORT);
+    logger.info(`HTTP server running at ${PORT}`);
 });
